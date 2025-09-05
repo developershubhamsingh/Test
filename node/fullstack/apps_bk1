@@ -1,0 +1,44 @@
+let express = require('express');
+// express is the framework of node js .
+//to access the methods of express .
+// we have to create the object of express.
+let app = express();
+let port = 7000;
+
+let categoryRouter = express.Router();
+let productsRouter = express.Router();
+
+app.get('/', (req, res) => {
+    res.send("Hello from express ! ");
+    res.end();
+})
+
+categoryRouter.route("/")
+    .get((req, res) => {
+        res.send(" category ! ");
+    })
+categoryRouter.route("/details")
+    .get((req, res) => {
+        res.send("category details ! ");
+    })
+
+productsRouter.route("/")
+    .get((req, res) => {
+        res.send(" products ! ");
+    })
+
+productsRouter.route("/details")
+    .get((req, res) => {
+        res.send("products details ! ");
+    })
+
+app.use("/category",categoryRouter)
+app.use("/products",productsRouter)
+
+app.listen(port, (err) => {
+    if (err) throw err;
+    // console.log("Server is running on port " + port);
+    console.log(`Server is running on port ${port}`);
+
+})
+

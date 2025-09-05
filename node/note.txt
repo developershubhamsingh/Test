@@ -1,2 +1,17 @@
 https://endoflife.date/nodejs 
 https://survey.stackoverflow.co/2025/technology/
+
+we learn 👍 👍 👍 : 
+ package.json creation .
+ package-lock.json.
+ installing package.
+ gitignore.
+ node_modules.
+ local installation.
+ global installation.
+ Adding scripts.
+ node_mon.
+ inbuilt packages :
+  os|fs|https|
+Reading json through http servers and rendering.
+express.
