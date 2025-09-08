@@ -1,7 +1,5 @@
-let express = require('express');
-let categoryRouter = express.Router();
-
-let data= [
+db.category.insert(
+    [
         {
             "id":1,
             "category": "Fashion",
@@ -23,19 +21,13 @@ let data= [
             "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
         }
     ]
+)
 
-let Router = (navLink) => {
-    categoryRouter.route("/")
-        .get((req, res) => {
-            // res.send(" category ! ");
-            res.render("categories",{title:"Category Page", category:data,navLink})
-        })
 
-    categoryRouter.route("/details")
-        .get((req, res) => {
-            res.send("category details ! ");
-        })
-    return categoryRouter;
-}
-
-module.exports = Router;
+db.category.insert([
+    {
+        "id": 5,
+        "category": "LifeStyle",
+        "thumb": "https://i.ibb.co/r3SZq8S/footware.jpg"
+      }
+])
